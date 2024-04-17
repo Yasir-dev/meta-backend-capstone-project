@@ -11,6 +11,8 @@ Login to the MySQL Database shell and run the following commands
 - `use littlelemon;`
 - `CREATE USER 'admindjango'@'localhost' IDENTIFIED BY 'password';`
 - `GRANT ALL PRIVILEGES ON littlelemon.* TO 'admindjango'@'localhost';`
+- `GRANT ALL PRIVILEGES ON `test_littlelemon`.* TO 'django'@'localhost';`
+- `FLUSH PRIVILEGES;`
 
 ## Installation
 
@@ -29,3 +31,7 @@ Login to the MySQL Database shell and run the following commands
 - `/admin/`: This URL is for the Django admin interface.
 - `/api/`: This URL is for the API endpoints of the restaurant app.
 - `auth/`: This URL is for the authentication endpoints provided by Djoser. Djoser provides a set of Django Rest Framework views to handle basic actions such as registration, login, logout, password reset and account activation. It works with custom user model.
+
+## Run the tests
+
+`python manage.py test`
